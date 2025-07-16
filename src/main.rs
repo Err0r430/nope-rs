@@ -15,8 +15,8 @@ mod macros;
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     env_logger::init();
+
     let config = EnvConfig::from_env();
-    let addr = format!("0.0.0.0:{}", config.port);
 
     let postgres_service = Arc::new(
         PostgresService::new(
@@ -28,7 +28,7 @@ async fn main() -> std::io::Result<()> {
 
 
 
-    println!("Starting server on {}", addr);
+    println!("Starting server on {}", config.port);
 
 
     HttpServer::new(move || {
@@ -36,7 +36,7 @@ async fn main() -> std::io::Result<()> {
             .app_data(web::Data::new(Arc::clone(&postgres_service)))
             .configure(configure_routes)
     })
-    .bind(addr)?
+    .bind(format!("0.0.0.0:{}", config.port))?
     .run()
     .await
 }

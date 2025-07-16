@@ -22,7 +22,6 @@ impl MigrationTrait for Migration {
                         ColumnDef::new(Nopes::Language)
                             .string()
                             .not_null()
-                            .unique_key(),
                     )
                     .col(
                         ColumnDef::new(Nopes::Nope)

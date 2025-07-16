@@ -1,6 +1,10 @@
 use crate::db::postgres_service::PostgresService;
 use entity::nopes::{self, Entity as Nopes};
-use sea_orm::{EntityTrait, ColumnTrait, QueryFilter, Set, DbErr, ActiveModelTrait, IntoActiveModel};
+use migration::Expr;
+use sea_orm::{
+    query::{Order},
+    ActiveModelTrait, ActiveValue, DbErr, EntityTrait, IntoActiveModel, QueryOrder,
+};
 
 impl PostgresService {
     pub async fn create_nope(&self, nope: nopes::Model) -> Result<nopes::Model, DbErr> {
@@ -16,13 +20,21 @@ impl PostgresService {
         Nopes::find().all(&self.db).await
     }
 
+    // Get a random nope from the database.
+    pub async fn get_random_nope(&self) -> Result<Option<nopes::Model>, DbErr> {
+        Nopes::find()
+            .order_by(Expr::cust("RANDOM()"), Order::Asc)
+            .one(&self.db)
+            .await
+    }
+
     pub async fn update_nope(
         &self,
         id: String,
         nope: nopes::Model,
     ) -> Result<nopes::Model, DbErr> {
         let mut nope = nope.into_active_model();
-        nope.id = sea_orm::ActiveValue::Unchanged(id);
+        nope.id = ActiveValue::Unchanged(id);
         nope.update(&self.db).await
     }
 
