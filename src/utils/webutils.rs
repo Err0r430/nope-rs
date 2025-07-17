@@ -19,7 +19,6 @@ impl WebUtils {
                 .or_else(|| value.strip_prefix("Bearer%20"))
         })
         .map(|s| s.to_string())
-        .map(|s| s.to_string())
     }
 
     // Check the api key against the configured api key.
