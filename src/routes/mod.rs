@@ -19,7 +19,7 @@ pub fn configure_routes(cfg: &mut web::ServiceConfig) {
             .service(health::health)
     )
     .service(
-        web::scope("/nope")
+        web::scope("/")
             .wrap(Governor::new(&standard_govnah))
             .service(nope::get_random_nope)
     );
