@@ -1,65 +1,69 @@
 # nope.rs
 
 ## No as a Service.
-A simple, localizable API that says “no” in many ways, across many languages.
+> A simple, localizable API that says “no” in many ways, across many languages.
 
-⸻
 
-✨ What is nope.rs?
 
-A minimalist HTTP service that responds to your requests with localized, expressive denials.
+Use it for task like:
 
-Use it for:
 	•	Denying access with flair
 	•	Fun error messaging
-	•	Saying “no” – programmatically
+	•	Saying “no” with pazazz
 
-⸻
 
-📦 Usage
+# Usage
 
-GET https://nope.rs/
+Main endpoint: `https://nope.rs/nope`
 
+> Return structure
+```ts
 {
-  "no": "Nope",
-  "language": "en",
-  "code": 403
+  "success": true, // Boolean indicating whether or not the request was successfully completed internally.
+  "data": { // Object containing the nope data
+    "language": "en", // iso language code
+    "nope": "I’d consider it… if the laws of physics didn’t apply." // Actual nope phrase.
+  },
+  "error": null, // If there was an error, this will contain the error message.
+  "message": "Successfully got random nope." // User friendly response message.
 }
+```
 
-➕ Parameters
+> Parameters
 
-Query Param	Description	Example
-lang	ISO 639-1 language code	lang=es
-tone	Optional: formal, casual	tone=casual
+Just tack on a query parameter `?lang=code` to choose one of the supported languages. Otherwise, it defaults to English.
 
+> Response codes.
 
-⸻
+nope.rs returns 200 or 429. Right now I have no need for admin routes so you will never see a 403. 
 
-🌍 Supported Languages
+429 does not follow the same response structure and is simple text explaining how long until you can try again. Read rate limits from response status code please.
 
-We support most major languages and dialects.
-Auto-detect coming soon.
+# Supported Languages
 
-⸻
-
-🔌 Self-hosting
-
-cargo run --release
-
-Environment options:
-
-Variable	Default	Description
-PORT	8080	Port to run on
+I support mostly english, but am looking for as many languages as people wish to PR in.
 
 
-⸻
 
-📜 License
+##  Self-hosting
+Just run the dockerfile.
 
-MIT © nope.rs contributors
 
-⸻
+> Environment options:
 
-🛠️ Made With
+```
+PORT=8080 (Whatever port you want the api to run on)
 
-Rust · Actix-Web · Lingo
+Note, the below keys are remnants from my api base but remain in the case I choose to add runtime list updates.
+API_KEY_0="full access api key"
+API_KEY_1="controlled access read write api key"
+API_KEY_2="read only api key"
+
+```
+
+# License
+
+This is a "Do what you want" license.
+
+You may use, modify, and distribute this project however you like.
+The only requirement: **credit me somewhere.**

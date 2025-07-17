@@ -1,8 +1,12 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
-// Json schema for the nope type
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Nope {
     pub language: String,
     pub nope: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct NopeQuery {
+    pub lang: Option<String>,
 }

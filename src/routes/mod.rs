@@ -1,18 +1,17 @@
 use actix_web::web;
 use actix_governor::{Governor, GovernorConfigBuilder};
 
-pub mod admin;
 pub mod health;
 pub mod nope;
 
 pub fn configure_routes(cfg: &mut web::ServiceConfig) {
 
-    // configure a rate limit: 60 requests per minute, burst up to 5
+    // configure a rate limit: 5 requests per second, burst up to 2
     let standard_govnah = GovernorConfigBuilder::default()
-        .requests_per_minute(50)
-        .burst_size(5)
+        .requests_per_minute(100)
+        .burst_size(1)
         .finish()
-        .expect("Invalid standard governor configuration");
+        .expect("Invalid strict governor configuration");
 
     cfg
     .service(
@@ -22,11 +21,6 @@ pub fn configure_routes(cfg: &mut web::ServiceConfig) {
     .service(
         web::scope("/nope")
             .wrap(Governor::new(&standard_govnah))
-            .service(nope::health)
-    )
-    .service(
-        web::scope("/admin")
-            .service(admin::admin_nope_create)
-    )
-    ;
+            .service(nope::get_random_nope)
+    );
 }

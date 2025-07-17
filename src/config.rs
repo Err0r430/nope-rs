@@ -4,7 +4,6 @@ use std::env;
 pub struct EnvConfig {
     pub port: i32,
     pub keys: Keys,
-    pub db_url: String,
 }
 
 pub struct Keys {
@@ -44,8 +43,6 @@ impl EnvConfig {
         let ring1_key = Self::get_env("API_KEY_1");
 
         let ring2_key = Self::get_env("API_KEY_2");
-
-        let db_url = Self::get_env("DATABASE_URL");
         
         let api_key = Keys {
             ring0: ring0_key,
@@ -57,7 +54,6 @@ impl EnvConfig {
         EnvConfig {
             port,
             keys: api_key,
-            db_url,
         }
     }
 }
