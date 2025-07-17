@@ -9,7 +9,7 @@ pub fn configure_routes(cfg: &mut web::ServiceConfig) {
     // configure a rate limit: 5 requests per second, burst up to 2
     let standard_govnah = GovernorConfigBuilder::default()
         .requests_per_minute(100)
-        .burst_size(1)
+        .burst_size(5)
         .finish()
         .expect("Invalid strict governor configuration");
 
