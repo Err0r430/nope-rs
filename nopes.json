@@ -1,15 +1,19 @@
 [
   {
     "language": "de",
-    "nope": "Nein"
+    "nope": "Nein."
   },
   {
     "language": "en",
-    "nope": "Nope"
+    "nope": "Nope."
   },
   {
     "language": "en",
-    "nope": "Not really feeling it, tbh."
+    "nope": "No."
+  },
+  {
+    "language": "en",
+    "nope": "Not really feeling it, to be honest."
   },
   {
     "language": "en",
@@ -57,7 +61,7 @@
   },
   {
     "language": "en",
-    "nope": "On a scale of 1 to yes, I’m hovering around “are you serious?”"
+    "nope": "On a scale of 1 to yes, I’m hovering around 'are you serious?'"
   },
   {
     "language": "en",
@@ -105,7 +109,7 @@
   },
   {
     "language": "en",
-    "nope": "If no had a spokesperson, it’d be me right now."
+    "nope": "If 'no' had a spokesperson, it’d be me right now."
   },
   {
     "language": "en",
@@ -113,7 +117,7 @@
   },
   {
     "language": "en",
-    "nope": "Yeah, no"
+    "nope": "Yeah, no."
   },
   {
     "language": "en",
@@ -133,51 +137,51 @@
   },
   {
     "language": "en",
-    "nope": "negative"
+    "nope": "Negative."
   },
   {
     "language": "en",
-    "nope": "never"
+    "nope": "Never."
   },
   {
     "language": "en",
-    "nope": "hard pass..."
+    "nope": "Hard pass."
   },
   {
     "language": "en",
-    "nope": "not in a million years"
+    "nope": "Not in a million years."
   },
   {
     "language": "en",
-    "nope": "nuh uh"
+    "nope": "Nuh uh."
   },
   {
     "language": "en",
-    "nope": "not a chance"
+    "nope": "Not a chance."
   },
   {
     "language": "en",
-    "nope": "by no means"
+    "nope": "By no means."
   },
   {
     "language": "en",
-    "nope": "no way, jose"
+    "nope": "No way, Jose."
   },
   {
     "language": "en",
-    "nope": "nah"
+    "nope": "Nah."
   },
   {
     "language": "en",
-    "nope": "Yes! But when pigs fly"
+    "nope": "Yes! But when pigs fly."
   },
   {
     "language": "en",
-    "nope": "please return to sender"
+    "nope": "Please return to sender."
   },
   {
     "language": "en",
-    "nope": "awww only in your dreams"
+    "nope": "Only in your dreams."
   },
   {
     "language": "en",
@@ -185,98 +189,90 @@
   },
   {
     "language": "en",
-    "nope": "hahah no"
+    "nope": "Hah, no."
   },
   {
     "language": "en",
-    "nope": "im flattered, but ill have to decline"
+    "nope": "I'm flattered, but I'll have to decline."
   },
   {
     "language": "en",
-    "nope": "I would but my couch and i have a hot date tonight"
+    "nope": "I would, but my couch and I have a hot date tonight."
   },
   {
     "language": "en",
-    "nope": "i’m allergic to that idea and forgot my epipen\n"
+    "nope": "I'm allergic to that idea and forgot my EpiPen."
   },
   {
     "language": "en",
-    "nope": "I'll be available on January 32th"
+    "nope": "I'll be available on January 32nd."
   },
   {
     "language": "en",
     "nope": "Sorry, I'm taking my fish for a walk at that time."
   },
   {
+    "language": "en",
+    "nope": "Only if the sun rises in the west."
+  },
+  {
+    "language": "en",
+    "nope": "In your dreams."
+  },
+  {
+    "language": "en",
+    "nope": "I might have to sit this one out."
+  },
+  {
     "language": "es",
-    "nope": "No"
+    "nope": "No."
   },
   {
     "language": "fr",
-    "nope": "Non"
+    "nope": "Non."
   },
   {
     "language": "it",
-    "nope": "No"
+    "nope": "No."
   },
   {
     "language": "ja",
-    "nope": "いいえ"
+    "nope": "いいえ。"
   },
   {
     "language": "ko",
-    "nope": "아니요"
+    "nope": "아니요."
   },
   {
     "language": "pt",
-    "nope": "Não"
+    "nope": "Não."
   },
   {
-    "language": "pt-br",
-    "nope": "não"
+    "language": "pt",
+    "nope": "Só não."
   },
   {
-    "language": "pt-br",
-    "nope": "Tire seu cavalinho da chuva!"
-  },
-  {
-    "language": "pt-br",
-    "nope": "Só não"
-  },
-  {
-    "language": "pt-br",
-    "nope": "Nem que a vaca tussa e a pulga peide\n"
-  },
-  {
-    "language": "pt-br",
+    "language": "pt",
     "nope": "Nem em outra encarnação!"
   },
   {
-    "language": "pt-br",
+    "language": "pt",
+    "nope": "Nem que a vaca tussa e a pulga peide."
+  },
+  {
+    "language": "pt",
+    "nope": "Tire seu cavalinho da chuva!"
+  },
+  {
+    "language": "pt",
     "nope": "Nem se me pagar um caminhão de chocolate."
   },
   {
-    "language": "en",
-    "nope": "only if the sun rises in the west"
-  },
-  {
-    "language": "en",
-    "nope": "in your dreams"
-  },
-  {
-    "language": "en",
-    "nope": "im flattered, but ill have to decline"
-  },
-  {
-    "language": "en",
-    "nope": "i might have to sit this one out"
-  },
-  {
     "language": "ru",
-    "nope": "Нет"
+    "nope": "Нет."
   },
   {
     "language": "zh",
-    "nope": "不"
+    "nope": "不。"
   }
 ]
