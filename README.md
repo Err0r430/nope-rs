@@ -7,9 +7,9 @@
 
 Use it for task like:
 
-	•	Denying access with flair
-	•	Fun error messaging
-	•	Saying “no” with pazazz
+- Denying access with flair
+- Fun error messaging
+- Saying “no” (but with pazazz)
 
 
 # Usage
@@ -60,6 +60,14 @@ API_KEY_1="controlled access read write api key"
 API_KEY_2="read only api key"
 
 ```
+
+# Credits
+### As people contribute they will be listed here.  
+
+[Hotheadhacker](https://github.com/hotheadhacker) for making the original no as a service api which inspired this. 
+
+[Err0r430](https://x.com/itsnoahd) Making this. 
+
 
 # License
 
