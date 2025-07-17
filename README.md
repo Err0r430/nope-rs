@@ -14,7 +14,7 @@ Use it for task like:
 
 # Usage
 
-Main endpoint: `https://nope.rs/nope`
+Main endpoint: `https://api.nope.rs/`
 
 > Return structure
 ```ts
